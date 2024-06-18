@@ -1,11 +1,10 @@
 package com.example.helloWorld.service.impl;
 
 import com.example.helloWorld.entity.User;
-import com.example.helloWorld.respository.UserRepository;
+import com.example.helloWorld.repository.UserRepository;
 import com.example.helloWorld.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -35,4 +34,3 @@ public class UserServiceImpl implements UserService {
         userRepository.deleteById(id);
     }
 }
-

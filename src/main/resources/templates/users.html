@@ -11,6 +11,7 @@
         <th>ID</th>
         <th>User Name</th>
         <th>Email</th>
+        <th>Password Hash</th>
         <th>Created At</th>
         <th>Updated At</th>
     </tr>
@@ -20,6 +21,7 @@
         <td th:text="${user.userID}">1</td>
         <td th:text="${user.userName}">John Doe</td>
         <td th:text="${user.email}">john.doe@example.com</td>
+        <td th:text="${user.passwordHash}">hashedpassword</td>
         <td th:text="${user.createdAt}">2023-01-01T00:00:00</td>
         <td th:text="${user.updatedAt}">2023-01-01T00:00:00</td>
     </tr>

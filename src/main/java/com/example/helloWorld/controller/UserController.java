@@ -10,19 +10,27 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.logging.Logger;
 
 @Controller
 @RequestMapping("/users")
 public class UserController {
+
+    private static final Logger logger = Logger.getLogger(UserController.class.getName());
 
     @Autowired
     private UserService userService;
 
     @GetMapping
     public String getAllUsers(Model model) {
+        logger.info("Entering getAllUsers method");
         List<User> users = userService.getAllUsers();
+        logger.info("Number of users retrieved: " + users.size());
+        for (User user : users) {
+            logger.info("User: " + user.getUserName());
+        }
         model.addAttribute("users", users);
-        return "users";  // 返回视图名称，对应users.html
+        return "users";
     }
 
     @GetMapping("/{id}")

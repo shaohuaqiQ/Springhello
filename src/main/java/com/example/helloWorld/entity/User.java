@@ -26,8 +26,6 @@ public class User {
     @Column(name = "updatedat", nullable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
     private LocalDateTime updatedAt;
 
-    // Getters and Setters
-
     public Long getUserID() {
         return userID;
     }

@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: HelloWorld
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/helloworld
+    username: root
+    password: Qsh3181155
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML
+    encoding: UTF-8
+    content-type: text/html
